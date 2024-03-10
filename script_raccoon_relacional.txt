@@ -1,0 +1,16 @@
+USUARIO (id_usuario, U-dni, N-nombre, N-apellidos, N-direccion, piso_puerta, N-ciudad, N-provincia, N-pais, N-codio_postal, movil, N-email, N-contrasenia, 								N-repetir_contrasenia)
+		 ___________
+
+PRODUCTO (id_producto, N-U-referencia, N-nombre, N-precio, N-descripcion, N-tipo, stock)
+		  ____________
+
+PEDIDO (id_pedido, id_producto, id_usuario, cantidad_producto, total_compra, tarjeta, fecha_compra)
+		_________  -----------  ----------
+
+		FK1 (id_producto -> PRODUCTO)
+		FK2 (id_usuario -> USUARIO)
+
+OFERTA (id_oferta, id_producto, procentaje_descuento, fecha_inicio, fecha_fin)
+		_________  -----------
+
+		FK (id_producto -> PRODUCTO)
